@@ -1,0 +1,50 @@
+html {
+  background-color: #172446;
+  color: white;
+}
+
+body {
+  padding: 24px 270px 24px 270px;
+}
+
+nav {
+  background-color: #172446;
+  box-shadow: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+
+.title {
+  font-size: 56px;
+}
+
+.box {
+  background-color: #3a4562;
+  border-radius: 4px;
+  padding: 10px;
+  width: 30%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1300px) {
+  .title {
+    font-size: 30px;
+  }
+}
