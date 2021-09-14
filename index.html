@@ -30,7 +30,7 @@
     <div id="content"></div>
     <script>
       // Hier die Komponenten eintragen
-      const pages = ["header", "navigation", "description-picture"];
+      const pages = ["header", "navigation", "slider-img", "slider-text"]; // "navigation", "description-picture", "slider"
 
       /**
        * @param {String} url - address for the HTML to fetch
@@ -47,6 +47,51 @@
           e.innerHTML = await fetchHtmlAsText("./components/" + page + ".html");
           contentDiv.appendChild(e);
         }
+        M.AutoInit();
+
+        sliderOptions = { dist: 0, padding: 150 };
+        elems = document.querySelectorAll(".carousel-img");
+        instances = M.Carousel.init(elems, sliderOptions);
+
+        elemSliderImg = document.querySelector(".carousel-img");
+        instanceSliderImg = M.Carousel.getInstance(elemSliderImg);
+
+        document
+          .getElementById("next-img")
+          .addEventListener("click", function () {
+            instanceSliderImg.next();
+          });
+
+        document
+          .getElementById("previous-img")
+          .addEventListener("click", function () {
+            instanceSliderImg.prev();
+          });
+
+        sliderOptions = { numVisible: 3, indicators: true, padding: 200 };
+        elems = document.querySelectorAll(".carousel-text");
+        instances = M.Carousel.init(elems, sliderOptions);
+
+        elemSliderText = document.querySelector(".carousel-text");
+        instanceSliderText = M.Carousel.getInstance(elemSliderText);
+
+        document
+          .getElementById("next-text")
+          .addEventListener("click", function () {
+            instanceSliderText.next();
+          });
+
+        document
+          .getElementById("previous-text")
+          .addEventListener("click", function () {
+            instanceSliderText.prev();
+          });
+
+        document.getElementById("close").addEventListener("click", function () {
+          elem = document.querySelector(".sidenav");
+          instance = M.Sidenav.getInstance(elem);
+          instance.close();
+        });
       }
 
       document.addEventListener("DOMContentLoaded", function (event) {

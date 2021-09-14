@@ -1,27 +1,57 @@
-<nav class="nav-extended">
-  <div class="nav-wrapper">
-    <img href="../logo.svg" class="brand-logo" />
-    <a href="#" data-target="mobile" class="sidenav-trigger"
-      ><i class="material-icons">menu</i></a
-    >
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li>
-        <a href=""><i class="material-icons">search</i></a>
-      </li>
-      <li><a href="">Hilfe</a></li>
-      <li><a href="">MyCargo</a></li>
-      <li><a href="">Sendungsverfolgung</a></li>
-      <li class="indicator"></li>
-    </ul>
+<div class="padding">
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <img src="../assets/logo.svg" width="100px" class="brand-logo"
+      /></a>
+
+      <a
+        style="float: right"
+        href="#"
+        data-target="mobile-demo"
+        class="sidenav-trigger"
+        ><i class="material-icons">menu</i></a
+      >
+      <a style="float: right" href="" class="hide-desktop"
+        ><i class="material-icons">search</i></a
+      >
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href=""><i class="material-icons">search</i></a>
+        </li>
+        <li><a href="">Hilfe</a></li>
+        <li><a href="">MyCargo</a></li>
+        <li><a href="">Sendungsverfolgung</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <div class="flex" style="padding: 15px">
+      <a href="#" class="brand-logo">
+        <img src="../assets/logo.svg" width="100px" class="brand-logo"
+      /></a>
+
+      <a
+        ><i
+          style="color: white; cursor: pointer"
+          class="material-icons"
+          id="close"
+          >close</i
+        ></a
+      >
+    </div>
+    <div style="margin: 0 15px 0 15px" class="divider"></div>
+    <li><a href="">Hilfe</a></li>
+    <li><a href="">MyCargo</a></li>
+    <li><a href="">Sendungsverfolgung</a></li>
+
+    <li><a href="">Hilfe</a></li>
+    <li><a href="">MyCargo</a></li>
+    <li><a href="">Sendungsverfolgung</a></li>
+  </ul>
+
+  <div style="padding: 0 15px 0 0">
+    <div class="divider"></div>
   </div>
-</nav>
-
-<ul class="sidenav" id="mobile">
-  <li><a href="">Hilfe</a></li>
-  <li><a href="">MyCargo</a></li>
-  <li><a href="">Sendungsverfolgung</a></li>
-</ul>
-
-<div style="padding: 0 15px 0 0">
-  <div class="divider"></div>
 </div>
