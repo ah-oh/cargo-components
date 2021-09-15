@@ -1,6 +1,7 @@
 html {
   background-color: #172446;
   color: white;
+  font-family: "Fira Sans";
 }
 
 /* Padding für die Komponenten um Rand zu schaffen */
@@ -20,7 +21,7 @@ html {
 /* große Überschriften */
 
 .title {
-  font-size: 56px;
+  font-size: 32px;
 }
 
 /* Graue Box für Logos und Bilder, width und height jenachdem nochmal seperat einstellen*/
@@ -28,6 +29,12 @@ html {
   background-color: #3a4562;
   border-radius: 4px;
   padding: 5px 20px 5px 20px;
+}
+
+.box-dark {
+  background-color: #172446;
+  border-radius: 4px;
+  padding: 40px;
 }
 
 .icon {
@@ -60,6 +67,20 @@ html {
 .slider-title {
   font-size: 20px;
   padding: 10px;
+  font-weight: 500;
+}
+
+.facts {
+  margin-top: 20px;
+}
+
+.facts > div:nth-child(odd) {
+  opacity: 0.6;
+}
+
+.facts > div:nth-child(even) {
+  font-size: 26px;
+  padding: 5px 0 5px 0;
 }
 
 /* Ändern der Materialize-Komponenten*/
@@ -99,8 +120,49 @@ nav {
   height: 300px;
   border-radius: 4px;
   width: 600px !important;
-  padding: 30px;
+  padding: 20px 50px;
   text-align: center;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel.carousel-text .carousel-item::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-img .tabs {
+  height: 80px;
+}
+
+.tabs-img .tabs .tab {
+  height: 80px;
+}
+
+.tabs .tab a.active {
+  background-color: #cccbcb4d;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: #cccbcb4d;
+}
+
+.tab-font {
+  position: relative;
+  top: -25px;
+  color: #172446;
+}
+
+.no-indicator > .indicator {
+  display: none;
+}
+
+.tab-content {
+  background-color: #cccbcb4d;
+  border-radius: 0 0 4px 4px;
+  color: #172446;
 }
 
 /* Medium devices (tablets/ large phones, 992px and under) */
@@ -125,6 +187,7 @@ nav {
   }
   .carousel.carousel-text .carousel-item {
     width: 300px !important;
+    padding: 15px;
   }
 }
 
@@ -132,5 +195,11 @@ nav {
 @media only screen and (min-width: 992px) {
   .hide-desktop {
     display: none;
+  }
+
+  .flex-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
