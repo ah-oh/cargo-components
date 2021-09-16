@@ -6,7 +6,8 @@ html {
 
 /* Padding für die Komponenten um Rand zu schaffen */
 .padding {
-  padding: 0 15% 0 15%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 /* für Flexboxen in einer Reihe */
@@ -25,16 +26,22 @@ html {
 }
 
 /* Graue Box für Logos und Bilder, width und height jenachdem nochmal seperat einstellen*/
-.box {
+.box-light {
   background-color: #3a4562;
   border-radius: 4px;
-  padding: 5px 20px 5px 20px;
+  padding: 40px;
 }
 
 .box-dark {
   background-color: #172446;
   border-radius: 4px;
   padding: 40px;
+}
+
+.box-tiny {
+  min-width: 23%;
+  height: 100%;
+  margin-bottom: 10px;
 }
 
 .icon {
@@ -50,6 +57,11 @@ html {
 
 .section {
   margin-top: 30px;
+}
+
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* Kreis um Icon*/
@@ -81,6 +93,15 @@ html {
 .facts > div:nth-child(even) {
   font-size: 26px;
   padding: 5px 0 5px 0;
+}
+
+.list a {
+  color: #ff6900;
+  text-decoration: underline;
+}
+
+.list {
+  list-style-type: circle;
 }
 
 /* Ändern der Materialize-Komponenten*/
@@ -139,13 +160,13 @@ nav {
   height: 80px;
 }
 
-.tabs .tab a.active {
+.tabs-img .tabs .tab a.active {
   background-color: #cccbcb4d;
   border-radius: 4px 4px 0px 0px;
 }
 
-.tabs .tab a:focus,
-.tabs .tab a:focus.active {
+.tabs-img .tabs .tab a:focus,
+.tabs-img .tabs .tab a:focus.active {
   background-color: #cccbcb4d;
 }
 
@@ -163,6 +184,22 @@ nav {
   background-color: #cccbcb4d;
   border-radius: 0 0 4px 4px;
   color: #172446;
+}
+
+.collapsible {
+  border: none;
+}
+
+.collapsible-header {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3px 3px 0 0;
+  border: none;
+}
+
+.collapsible-body {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 0 0 3px 3px;
 }
 
 /* Medium devices (tablets/ large phones, 992px and under) */
@@ -189,6 +226,13 @@ nav {
     width: 300px !important;
     padding: 15px;
   }
+  .btn {
+    width: 100%;
+  }
+  .flex-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 992px and up) */
@@ -200,6 +244,14 @@ nav {
   .flex-desktop {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
+  }
+
+  .half {
+    max-width: 45%;
+  }
+
+  .box {
+    padding: 20px 40px 20px 0;
   }
 }
