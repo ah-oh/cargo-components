@@ -1,17 +1,34 @@
+/* Generalle Einstellungen für die ganze Seite */
 html {
   background-color: #172446;
   color: white;
   font-family: "Fira Sans";
+  font-weight: 400;
 }
 
-/* Padding für die Komponenten um Rand zu schaffen */
+/* Padding für die einzelnen Komponenten um Rand zu schaffen */
 .padding {
   padding-left: 15%;
   padding-right: 15%;
 }
 
-/* für Flexboxen in einer Reihe */
+/*Zusätzlicher Abstand am Ende der Komponente */
+.margin-t {
+  margin-top: 30px;
+}
 
+/*Abstand oben unten der Komponente*/
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/*Padding für Überschriften */
+.title-padding {
+  padding: 10px 0 10px 0;
+}
+
+/* für divs in einer Reihe */
 .flex {
   display: flex;
   flex-direction: row;
@@ -19,49 +36,58 @@ html {
   align-items: center;
 }
 
-/* große Überschriften */
-
+/* große Überschriften -> die bei mobiler Ansicht kleiner werden */
 .title {
   font-size: 32px;
 }
 
-/* Graue Box für Logos und Bilder, width und height jenachdem nochmal seperat einstellen*/
-.box-light {
+/*etwas kleinere Überschrift */
+.title-tiny {
+  font-size: 20px;
+}
+
+/* Hintergrundfarben */
+.white {
+  background-color: white;
+  color: #172446;
+}
+
+.light {
   background-color: #3a4562;
-  border-radius: 4px;
-  padding: 40px;
+  font-weight: 400;
 }
 
-.box-dark {
+.dark {
   background-color: #172446;
+}
+
+.lighter {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/*hervorgehobene Wörter */
+b {
+  color: #ff6900;
+}
+
+/* Box für Logos/Bilder/Text -> mit jeweiliger background-color */
+.box {
   border-radius: 4px;
   padding: 40px;
 }
 
-.box-tiny {
+/*Reihe von 4 Boxen */
+.box-row > div {
   min-width: 23%;
   height: 100%;
   margin-bottom: 10px;
 }
 
+/*Zentriert Icons */
 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Hintergrund für hellere Bereiche */
-.background-light {
-  background-color: #3a4562;
-}
-
-.section {
-  margin-top: 30px;
-}
-
-.section-padding {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 /* Kreis um Icon*/
@@ -76,16 +102,7 @@ html {
   border: 1px solid rgb(255, 255, 255);
 }
 
-.slider-title {
-  font-size: 20px;
-  padding: 10px;
-  font-weight: 500;
-}
-
-.facts {
-  margin-top: 20px;
-}
-
+/*wechselt ab zwischen ausgegrauter kleiner Überschrift und etwas größerer hellerer Text*/
 .facts > div:nth-child(odd) {
   opacity: 0.6;
 }
@@ -95,16 +112,41 @@ html {
   padding: 5px 0 5px 0;
 }
 
-.list a {
+/*für Auflistungen mit Punkt*/
+.list > li {
+  list-style-type: disc !important;
+  margin-left: 17px;
+}
+
+/*für Links*/
+.link {
   color: #ff6900;
   text-decoration: underline;
 }
 
-.list {
-  list-style-type: circle;
+/*für Links mit Icon */
+.link-icon {
+  color: #ff6900;
+  text-decoration: none;
 }
 
-/* Ändern der Materialize-Komponenten*/
+.link-icon > i {
+  position: relative;
+  top: 7px;
+}
+
+/*für alle Buttons -> mobil auf width: 100% */
+.btn {
+  background-color: #ff6900;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #ff8126;
+}
+
+/* Nav-bar: */
 nav {
   background-color: #172446;
   box-shadow: none;
@@ -123,6 +165,12 @@ nav {
   background-color: #ff6900 !important;
 }
 
+/*Carousels: */
+.carousel {
+  cursor: pointer;
+}
+
+/*Für Slider mit Bildern -> carousel-img */
 .carousel.carousel-img {
   height: 120px;
 }
@@ -136,8 +184,8 @@ nav {
   height: 100%;
 }
 
+/* für Slider mit Text -> carousel-text */
 .carousel.carousel-text .carousel-item {
-  background-color: #172446;
   height: 300px;
   border-radius: 4px;
   width: 600px !important;
@@ -152,6 +200,44 @@ nav {
   display: none;
 }
 
+/*für noWrap-Slider */
+#carousel {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+#prev-noWrap,
+#next-noWrap {
+  background-color: rgba(23, 36, 70, 0.8);
+  color: white;
+  font-weight: lighter;
+  border-radius: 4px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+#prev-noWrap {
+  left: 0;
+  transform: translate(0%, -50%);
+  display: none;
+}
+
+#next-noWrap {
+  right: 0;
+  transform: translate(0%, -50%);
+}
+
+#content-slider {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(16, 300px);
+}
+
+/*für Tabs bei Versandrechner -> Tabs mit Icon */
 .tabs-img .tabs {
   height: 80px;
 }
@@ -186,6 +272,32 @@ nav {
   color: #172446;
 }
 
+.stepper {
+  display: flex;
+  gap: 15px;
+}
+
+.stepper.tabs .tab {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stepper.tabs .tab a {
+  color: white;
+  text-transform: none;
+}
+
+.stepper.tabs .done.tab,
+.stepper.tabs .active.tab {
+  background-color: white;
+}
+
+.stepper.tabs .done.tab a,
+.stepper.tabs .active.tab a {
+  color: rgb(23, 36, 70);
+}
+
+/* Collapsible */
 .collapsible {
   border: none;
 }
@@ -202,7 +314,29 @@ nav {
   border-radius: 0 0 3px 3px;
 }
 
-/* Medium devices (tablets/ large phones, 992px and under) */
+/* Only small devices (phones, 600px and under) */
+@media only screen and (max-width: 600px) {
+  #content-slider {
+    grid-template-columns: repeat(16, 260px);
+  }
+
+  #carousel {
+    overflow: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  #carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  #prev-noWrap,
+  #next-noWrap {
+    display: none;
+  }
+}
+
+/* Medium & small devices (tablets/ phones, 992px and under) */
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
     transform: none !important;
@@ -212,6 +346,7 @@ nav {
   .hide-mobile {
     display: none;
   }
+
   .title {
     font-size: 20px;
   }
@@ -244,14 +379,15 @@ nav {
   .flex-desktop {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-height: 600px;
+  }
+
+  .spacing {
+    padding: 20px 40px 20px 0;
   }
 
   .half {
     max-width: 45%;
-  }
-
-  .box {
-    padding: 20px 40px 20px 0;
   }
 }

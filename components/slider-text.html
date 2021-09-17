@@ -1,12 +1,8 @@
-<div class="background-light section">
+<div class="light section-padding">
   <div class="padding" style="padding-bottom: 60px">
     <div
-      style="
-        text-align: center;
-        font-size: 30px;
-        padding-top: 35px;
-        margin-bottom: -20px;
-      "
+      style="text-align: center; padding-top: 35px; margin-bottom: -20px"
+      class="title"
     >
       Das sagen Kunden zu Cargo International
     </div>
@@ -21,8 +17,8 @@
         >
       </div>
       <div class="carousel carousel-text">
-        <div class="carousel-item" href="#one!">
-          <div class="slider-title">Max Mustermann</div>
+        <div class="carousel-item dark" href="#one!">
+          <div class="title-tiny title-padding">Max Mustermann</div>
           <div>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -35,8 +31,8 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </div>
         </div>
-        <div class="carousel-item" href="#one!">
-          <div class="slider-title">Max Mustermann</div>
+        <div class="carousel-item dark" href="#one!">
+          <div class="title-tiny title-padding">Max Mustermann</div>
           <div>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -49,8 +45,8 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </div>
         </div>
-        <div class="carousel-item" href="#one!">
-          <div class="slider-title">Max Mustermann</div>
+        <div class="carousel-item dark" href="#one!">
+          <div class="title-tiny title-padding">Max Mustermann</div>
           <div>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -63,8 +59,8 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </div>
         </div>
-        <div class="carousel-item" href="#one!">
-          <div class="slider-title">Max Mustermann</div>
+        <div class="carousel-item dark" href="#one!">
+          <div class="title-tiny title-padding">Max Mustermann</div>
           <div>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -77,8 +73,8 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </div>
         </div>
-        <div class="carousel-item" href="#one!">
-          <div class="slider-title">Max Mustermann</div>
+        <div class="carousel-item dark" href="#one!">
+          <div class="title-tiny title-padding">Max Mustermann</div>
           <div>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -102,3 +98,26 @@
     </div>
   </div>
 </div>
+<script>
+  sliderOptions = {
+    numVisible: 3,
+    indicators: true,
+    padding: 200,
+  };
+
+  elemsText = document.querySelectorAll(".carousel-text");
+  instancesText = M.Carousel.init(elemsText, sliderOptions);
+
+  elemSliderText = document.querySelector(".carousel-text");
+  instanceSliderText = M.Carousel.getInstance(elemSliderText);
+
+  document.getElementById("next-text").addEventListener("click", function () {
+    instanceSliderText.next();
+  });
+
+  document
+    .getElementById("previous-text")
+    .addEventListener("click", function () {
+      instanceSliderText.prev();
+    });
+</script>

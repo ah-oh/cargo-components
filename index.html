@@ -33,15 +33,17 @@
       const pages = [
         "header",
         "navigation",
-        "slider-img",
+        "white-boxes",
         "box-facts",
-        "boxes",
-        "slider-text",
-        "questions",
+        "slider-noWrap",
         "info",
+        "boxes",
+        "slider-img",
+        "questions",
+        "slider-text",
         "footer",
       ];
-
+      //
       /**
        * @param {String} url - address for the HTML to fetch
        * @return {String} the resulting HTML string fragment
@@ -59,28 +61,57 @@
         }
         M.AutoInit();
 
-        sliderOptions = { dist: 0, padding: 150 };
-        elems = document.querySelectorAll(".carousel-img");
-        instances = M.Carousel.init(elems, sliderOptions);
+        gap = 16;
 
-        elemSliderImg = document.querySelector(".carousel-img");
-        instanceSliderImg = M.Carousel.getInstance(elemSliderImg);
+        carousel = document.getElementById("carousel");
+        content = document.getElementById("content-slider");
+        next = document.getElementById("next-noWrap");
+        prev = document.getElementById("prev-noWrap");
+        widthItem = document
+          .getElementById("item")
+          .getBoundingClientRect().width;
 
-        document
-          .getElementById("next-img")
-          .addEventListener("click", function () {
-            instanceSliderImg.next();
-          });
+        window.addEventListener(
+          "resize",
+          (e) =>
+            (widthItem = document
+              .getElementById("item")
+              .getBoundingClientRect().width)
+        );
 
-        document
-          .getElementById("previous-img")
-          .addEventListener("click", function () {
-            instanceSliderImg.prev();
-          });
+        next.addEventListener("click", (e) => {
+          carousel.scrollBy(widthItem + gap, 0);
+          if (carousel.scrollWidth !== 0) {
+            prev.style.display = "flex";
+          }
+          if (
+            content.scrollWidth - widthItem - gap <=
+            carousel.scrollLeft + carousel.offsetWidth
+          ) {
+            next.style.display = "none";
+          }
+        });
+        prev.addEventListener("click", (e) => {
+          carousel.scrollBy(-(widthItem + gap), 0);
+          if (carousel.scrollLeft - widthItem - gap <= 0) {
+            prev.style.display = "none";
+          }
+          if (
+            !content.scrollWidth - widthItem - gap <=
+            carousel.scrollLeft + widthItem
+          ) {
+            next.style.display = "flex";
+          }
+        });
 
-        sliderOptions = { numVisible: 3, indicators: true, padding: 200 };
-        elems = document.querySelectorAll(".carousel-text");
-        instances = M.Carousel.init(elems, sliderOptions);
+        sliderOptions = {
+          numVisible: 3,
+          indicators: true,
+          padding: 200,
+        };
+
+        elemsText = document.querySelectorAll(".carousel-text");
+        instancesText = M.Carousel.init(elemsText, sliderOptions);
 
         elemSliderText = document.querySelector(".carousel-text");
         instanceSliderText = M.Carousel.getInstance(elemSliderText);
@@ -97,11 +128,24 @@
             instanceSliderText.prev();
           });
 
-        document.getElementById("close").addEventListener("click", function () {
-          elem = document.querySelector(".sidenav");
-          instance = M.Sidenav.getInstance(elem);
-          instance.close();
-        });
+        sliderOptions = { dist: 0, padding: 150 };
+        elemsImg = document.querySelectorAll(".carousel-img");
+        instancesImg = M.Carousel.init(elemsImg, sliderOptions);
+
+        elemSliderImg = document.querySelector(".carousel-img");
+        instanceSliderImg = M.Carousel.getInstance(elemSliderImg);
+
+        document
+          .getElementById("next-img")
+          .addEventListener("click", function () {
+            instanceSliderImg.next();
+          });
+
+        document
+          .getElementById("previous-img")
+          .addEventListener("click", function () {
+            instanceSliderImg.prev();
+          });
       }
 
       document.addEventListener("DOMContentLoaded", function (event) {
