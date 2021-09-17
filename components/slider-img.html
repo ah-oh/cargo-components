@@ -27,21 +27,3 @@
     </div>
   </div>
 </div>
-<script>
-  sliderOptions = { dist: 0, padding: 150 };
-  elemsImg = document.querySelectorAll(".carousel-img");
-  instancesImg = M.Carousel.init(elemsImg, sliderOptions);
-
-  elemSliderImg = document.querySelector(".carousel-img");
-  instanceSliderImg = M.Carousel.getInstance(elemSliderImg);
-
-  document.getElementById("next-img").addEventListener("click", function () {
-    instanceSliderImg.next();
-  });
-
-  document
-    .getElementById("previous-img")
-    .addEventListener("click", function () {
-      instanceSliderImg.prev();
-    });
-</script>
