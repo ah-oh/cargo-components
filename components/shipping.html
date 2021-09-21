@@ -1,70 +1,178 @@
-<div class="padding">
-  <div
-    style="
-      background-color: white;
-      color: #172446;
-      border-radius: 4px;
-      padding: 30px;
-    "
-  >
-    <div>Jetzt Versandkosten berechnen</div>
-    <div class="row tabs-img">
-      <div class="col s12">
-        <ul class="tabs no-indicator">
-          <li class="tab col s3">
-            <a class="active" href="#test1"
-              ><img src="../assets/ci-paket.svg" width="40px" />
-              <div class="tab-font">Paket</div></a
-            >
-          </li>
-          <li class="tab col s3">
-            <a href="#test2"
-              ><img src="../assets/ci-sperrgut.svg" width="40px" />
-              <div class="tab-font">Sperrgut</div></a
-            >
-          </li>
-          <li class="tab col s3">
-            <a href="#test3"
-              ><img src="../assets/ci-einwegpalette.svg" width="40px" />
-              <div class="tab-font">Einwegpalette</div></a
-            >
-          </li>
-          <li class="tab col s3">
-            <a href="#test4"
-              ><img src="../assets/ci-europalette.svg" width="40px" />
-              <div class="tab-font">Europalette</div></a
-            >
-          </li>
-        </ul>
+<div class="padding flex-desktop section-padding" style="max-height: 1200px">
+  <div class="half"></div>
+  <div class="half">
+    <div
+      style="
+        background-color: white;
+        color: #172446;
+        border-radius: 4px;
+        padding: 30px;
+      "
+    >
+      <div class="title-tiny">Jetzt Versandkosten berechnen</div>
+      <div class="row tabs-img margin-t">
+        <div>
+          <ul class="tabs no-indicator shipping-grid">
+            <li class="tab">
+              <a class="active" href="#test1"
+                ><img src="../assets/ci-paket-dark.svg" width="30px" />
+                <div class="tab-font">Paket</div></a
+              >
+            </li>
+            <li class="tab">
+              <a href="#test2"
+                ><img src="../assets/ci-sperrgut.svg" width="30px" />
+                <div class="tab-font">Sperrgut</div></a
+              >
+            </li>
+
+            <li class="tab">
+              <a href="#test3"
+                ><img src="../assets/ci-einwegpalette.svg" width="30px" />
+                <div class="tab-font">Einwegpalette</div></a
+              >
+            </li>
+            <li class="tab">
+              <a href="#test4"
+                ><img src="../assets/ci-europalette.svg" width="30px" />
+                <div class="tab-font">Europalette</div></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="test1 test2 test3 test4" class="col s12">
+          <div class="tab-content shipping">
+            <div class="flex with-border margin-b">
+              <select class="browser-default input" style="width: 20%">
+                <option value="1">DE</option>
+                <option value="2">AU</option>
+                <option value="3">FR</option>
+              </select>
+              <input
+                type="text"
+                class="browser-default input text"
+                style="width: 77%"
+                placeholder="Abholadresse"
+              />
+            </div>
+            <div class="flex with-border margin-b">
+              <select class="browser-default input" style="width: 20%">
+                <option value="1">DE</option>
+                <option value="2">AU</option>
+                <option value="3">FR</option>
+              </select>
+              <input
+                type="text"
+                class="browser-default input text"
+                style="width: 77%"
+                placeholder="Zustelladresse"
+              />
+            </div>
+            <div class="flex-to-column">
+              <div class="input-row margin-b">
+                <input
+                  type="text"
+                  class="browser-default input text"
+                  placeholder="Länge"
+                />
+                <input
+                  type="text"
+                  class="browser-default input text"
+                  placeholder="Breite"
+                />
+                <input
+                  type="text"
+                  class="browser-default input text"
+                  placeholder="Höhe"
+                />
+              </div>
+              <div class="flex margin-b">
+                <input
+                  type="text"
+                  class="browser-default input text with-border"
+                  style="width: 40%"
+                  placeholder="Gewicht"
+                />
+                <input
+                  type="text"
+                  class="browser-default input text with-border"
+                  style="width: 40%"
+                  placeholder="Wert in €"
+                />
+                <i style="cursor: pointer" class="material-icons icon-btn"
+                  >delete</i
+                >
+              </div>
+            </div>
+            <div class="flex-to-column margin-b">
+              <div class="input-row margin-b">
+                <input
+                  type="text"
+                  class="browser-default input text"
+                  placeholder="Länge"
+                />
+                <input
+                  type="text"
+                  class="browser-default input text"
+                  placeholder="Breite"
+                />
+                <input
+                  type="text"
+                  class="browser-default input text"
+                  placeholder="Höhe"
+                />
+              </div>
+              <div class="flex margin-b">
+                <input
+                  type="text"
+                  class="browser-default input text with-border"
+                  style="width: 40%"
+                  placeholder="Gewicht"
+                />
+                <input
+                  type="text"
+                  class="browser-default input text with-border"
+                  style="width: 40%"
+                  placeholder="Wert in €"
+                />
+                <i style="cursor: pointer" class="material-icons icon-btn"
+                  >add</i
+                >
+              </div>
+            </div>
+            <div style="text-align: center">
+              <a class="waves-effect waves-light btn"
+                >Versandkosten berechnen</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="test1 test2 test3 test4" class="col s12">
-        <div class="tab-content">
-          <div class="flex">
-            <select class="browser-default">
-              <option value="1">DE</option>
-              <option value="2">AU</option>
-              <option value="3">FR</option>
-            </select>
-            <input
-              id="password"
-              placeholder="Abholadresse"
-              type="text"
-              class="browser-default"
-            />
-          </div>
-          <div class="flex">
-            <select class="browser-default">
-              <option value="1">DE</option>
-              <option value="2">AU</option>
-              <option value="3">FR</option>
-            </select>
-            <input
-              id="password"
-              placeholder="Abholadresse"
-              type="text"
-              class="browser-default"
-            />
-          </div>
+    </div>
+    <div
+      style="
+        background-color: white;
+        color: #172446;
+        border-radius: 4px;
+        padding: 30px;
+      "
+      class="margin-t flex-to-column"
+    >
+      <div class="half">
+        <div>Haben Sie einen Online-Shop?</div>
+        <div>
+          <a class="link-icon" href=""
+            >Integrationen <i class="material-icons">chevron_right</i></a
+          >
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="half">
+        <div>Eine Menge zu versenden?</div>
+        <div>
+          <a class="link-icon" href=""
+            >Für Vielversender <i class="material-icons">chevron_right</i></a
+          >
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- fonts -->
@@ -23,6 +24,12 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Cargo Components</title>
   </head>
@@ -34,13 +41,19 @@
         "header",
         "navigation",
         "white-boxes",
+        "logo-boxes",
+        "form-box",
         "box-facts",
+        "description-picture",
         "slider-noWrap",
         "info",
         "boxes",
         "slider-img",
+        "shipping",
         "questions",
         "slider-text",
+        "big-boxes",
+
         "footer",
       ];
       //
@@ -60,6 +73,12 @@
           contentDiv.appendChild(e);
         }
         M.AutoInit();
+
+        document.getElementById("close").addEventListener("click", function () {
+          elem = document.querySelector(".sidenav");
+          instance = M.Sidenav.getInstance(elem);
+          instance.close();
+        });
 
         gap = 16;
 
@@ -146,6 +165,27 @@
           .addEventListener("click", function () {
             instanceSliderImg.prev();
           });
+
+        const toggleButtons = document.getElementById("toggle-client").children;
+        for (btn of toggleButtons) {
+          btn.addEventListener("click", function () {
+            for (btn2 of toggleButtons) {
+              btn2.classList.remove("active");
+            }
+            this.classList.add("active");
+          });
+        }
+
+        const toggleButtons2 =
+          document.getElementById("toggle-package").children;
+        for (btn of toggleButtons2) {
+          btn.addEventListener("click", function () {
+            for (btn2 of toggleButtons2) {
+              btn2.classList.remove("active");
+            }
+            this.classList.add("active");
+          });
+        }
       }
 
       document.addEventListener("DOMContentLoaded", function (event) {

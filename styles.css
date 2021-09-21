@@ -17,6 +17,10 @@ html {
   margin-top: 30px;
 }
 
+.margin-b {
+  margin-bottom: 10px;
+}
+
 /*Abstand oben unten der Komponente*/
 .section-padding {
   padding-top: 60px;
@@ -44,6 +48,11 @@ html {
 /*etwas kleinere Überschrift */
 .title-tiny {
   font-size: 20px;
+}
+
+/*sehr große Überschrift */
+.title-big {
+  font-size: 50px;
 }
 
 /* Hintergrundfarben */
@@ -74,6 +83,25 @@ b {
 .box {
   border-radius: 4px;
   padding: 40px;
+}
+
+/*kleine Boxen für Logos -> Hintergrundfarbe extra einstellen */
+.logo-box {
+  width: 32%;
+  height: 80px;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.logo-box-big {
+  width: 23%;
+  padding: 50px;
+  display: flex;
+}
+
+.logo-box-big > img {
+  width: 60%;
+  margin: auto;
 }
 
 /*Reihe von 4 Boxen */
@@ -140,6 +168,7 @@ b {
   background-color: #ff6900;
   color: white;
   margin-top: 20px;
+  text-transform: none;
 }
 
 .btn:hover {
@@ -243,7 +272,15 @@ nav {
 }
 
 .tabs-img .tabs .tab {
-  height: 80px;
+  height: 100%;
+}
+
+.tabs-img .tabs .tab a img {
+  margin-top: 10px;
+}
+
+.tabs-img .tabs .tab a {
+  padding: 0;
 }
 
 .tabs-img .tabs .tab a.active {
@@ -256,6 +293,11 @@ nav {
   background-color: #cccbcb4d;
 }
 
+.shipping-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
 .tab-font {
   position: relative;
   top: -25px;
@@ -266,10 +308,8 @@ nav {
   display: none;
 }
 
-.tab-content {
-  background-color: #cccbcb4d;
-  border-radius: 0 0 4px 4px;
-  color: #172446;
+.row .col {
+  padding: 0;
 }
 
 .stepper {
@@ -314,6 +354,110 @@ nav {
   border-radius: 0 0 3px 3px;
 }
 
+/*für Input-felder */
+.input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid white;
+  transition: border 0.5s;
+  outline: none;
+  background-color: #cccbcb4d;
+}
+
+.shipping .input {
+  background-color: white;
+}
+
+.with-border .input:hover,
+.with-border.input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.with-border .input:focus,
+.with-border.input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.text {
+  padding-left: 10px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  border: 1px solid white;
+  background-color: white;
+  transition: border 0.5s;
+  width: 50%;
+}
+
+.input-row:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input-row > input {
+  width: 33%;
+}
+
+.input::placeholder {
+  color: #172446;
+}
+
+.input-row > .input:first-of-type {
+  border-radius: 4px 0 0 4px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-row > .input:nth-of-type(2) {
+  border-radius: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-row > .input:last-of-type {
+  border-radius: 0 4px 4px 0px;
+}
+
+.icon-btn {
+  color: #ff6900;
+}
+
+.line {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.toggle {
+  color: #1724464d;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #1724464d;
+  text-align: center;
+  margin-left: 3px;
+  cursor: pointer;
+  transition: color 0.5s, border 0.5s;
+}
+
+.toggle:hover {
+  color: #172446d3;
+  border: 1px solid #172446d3;
+}
+
+.toggle.active {
+  color: #172446;
+  background-color: #cccbcb4d;
+  border: 1px solid white;
+}
+
+#toggle-client > .toggle {
+  width: 50px;
+}
+
+#toggle-package > .toggle {
+  width: 80px;
+}
+
 /* Only small devices (phones, 600px and under) */
 @media only screen and (max-width: 600px) {
   #content-slider {
@@ -352,7 +496,8 @@ nav {
   }
 
   .padding {
-    padding: 0 30px 0 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .carousel.carousel-img .carousel-item {
     height: 30px !important;
@@ -367,6 +512,99 @@ nav {
   .flex-mobile {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .flex-mobile-column {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .logo-box {
+    width: 49%;
+    height: 80px;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .logo-box-big {
+    width: 100%;
+  }
+
+  .logo-box > img {
+    max-width: 60%;
+  }
+
+  .tabs-img .tabs {
+    height: 150px;
+  }
+
+  .tabs-img .tabs .tab a {
+    border-radius: 4px;
+    border: 1px solid #cccbcb4d;
+    align-items: center;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tabs-img .tabs .tab a > img {
+    margin-left: auto;
+    position: relative;
+    bottom: 8px;
+    margin-right: 3px;
+  }
+
+  .tabs-img .tabs .tab a > div {
+    margin-right: auto;
+  }
+
+  .tabs-img .tabs .tab a.active {
+    background-color: #cccbcb4d;
+    border-color: white;
+  }
+
+  .tab-font {
+    position: static;
+  }
+
+  .tabs-img .tabs .tab a:focus,
+  .tabs-img .tabs .tab a:focus.active {
+    background-color: #cccbcb4d;
+    border-color: white;
+  }
+
+  .shipping-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 60px);
+    gap: 5px;
+  }
+
+  .shipping .input {
+    background-color: #cccbcb4d;
+  }
+
+  .input-row > .input {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+
+  .input-row {
+    background-color: #cccbcb4d;
+    width: 100%;
+  }
+
+  .icon-btn {
+    background-color: #3a4562;
+    color: white;
+    border-radius: 4px;
+    padding: 6px;
+  }
+
+  .line {
+    height: 1px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 20px 0 20px 0;
   }
 }
 
@@ -389,5 +627,24 @@ nav {
 
   .half {
     max-width: 45%;
+  }
+
+  .tab-content {
+    background-color: #cccbcb4d;
+    border-radius: 0 0 4px 4px;
+    color: #172446;
+    padding: 40px 20px 20px 20px;
+  }
+
+  .flex-to-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .halfMin {
+    width: 45%;
   }
 }
