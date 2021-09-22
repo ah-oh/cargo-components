@@ -79,6 +79,10 @@ html {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
+.light-grey {
+  background-color: #cccbcb4d;
+}
+
 /*hervorgehobene Wörter */
 b {
   color: #ff6900;
@@ -187,7 +191,7 @@ nav {
 }
 
 .sidenav {
-  width: 100% !important;
+  width: 100vw !important;
   background-color: #172446;
 }
 
@@ -415,6 +419,35 @@ nav {
   border: none;
   background-color: rgba(255, 255, 255, 0.03);
   border-radius: 0 0 3px 3px;
+}
+
+/* Collapsible Menu */
+.menu .collapsible {
+  box-shadow: none;
+  margin: 0;
+}
+
+.collapsible-header.menu-point,
+.collapsible-body .menu-point {
+  background-color: white;
+  border-radius: 4px;
+  color: #3a4562;
+  height: 50px;
+  margin-bottom: 2px;
+  padding: 15px 15px 15px 20px;
+  cursor: pointer;
+  border-left: 3px solid white;
+  transition: border-color 0.4s;
+}
+
+.active-page.collapsible-header.menu-point,
+.collapsible-body .active-page.menu-point {
+  border-color: #ff6900;
+}
+
+.menu .collapsible-body {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0 0 0 20px;
 }
 
 /*für Input-felder */
@@ -822,6 +855,10 @@ nav {
 
   .half {
     max-width: 45%;
+  }
+
+  .half-box {
+    width: 49%;
   }
 
   .tab-content {
