@@ -46,13 +46,13 @@
     </div>
   </div>
 
-  <div class="margin-t box white hide-mobile">
-    <div class="title-small">Versandoptionen</div>
+  <form class="margin-t box white hide-mobile">
+    <div class="title-small margin-b">Versandoptionen</div>
     <div class="flex">
-      <div>
+      <div class="check-box">
         <p>
           <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
+            <input type="checkbox" class="filled-in" />
             <span>Terminankündigung beim Empfanger</span>
           </label>
         </p>
@@ -60,10 +60,10 @@
       <div>03.95 €</div>
     </div>
     <div class="flex">
-      <div>
+      <div class="check-box">
         <p>
           <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
+            <input type="checkbox" class="filled-in" />
             <span>Ware kann ohne Empfänger vor Ort abgestellt werden</span>
           </label>
         </p>
@@ -71,10 +71,10 @@
       <div>03.95 €</div>
     </div>
     <div class="flex margin-b">
-      <div>
+      <div class="check-box">
         <p>
           <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
+            <input type="checkbox" class="filled-in" />
             <span>Nachnahme</span>
           </label>
         </p>
@@ -120,11 +120,13 @@
       </div>
     </div>
     <div style="text-align: right">
-      <a class="waves-effect waves-light btn">Weiter zur Adresseingabe</a>
+      <button class="waves-effect waves-light btn" type="submit">
+        Weiter zur Adresseingabe
+      </button>
     </div>
-  </div>
+  </form>
 
-  <div class="hide-desktop">
+  <form class="hide-desktop">
     <div class="box white margin-b" style="padding: 20px">
       <div class="title-small">Versandoptionen</div>
       <div class="flex radio-box">
@@ -206,8 +208,10 @@
         <div>75,35 €</div>
       </div>
       <div>
-        <a class="waves-effect waves-light btn">Weiter zur Adresseingabe</a>
+        <button class="waves-effect waves-light btn" type="submit">
+          Weiter zur Adresseingabe
+        </button>
       </div>
     </div>
-  </div>
+  </form>
 </div>

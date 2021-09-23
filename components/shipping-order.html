@@ -1,7 +1,7 @@
 <div class="padding margin-t">
   <div class="box-desktop">
     <div class="title-small">Zur Übersicht</div>
-    <div class="margin-t grid-mobile">
+    <form class="margin-t grid-mobile">
       <div
         class="box-resp"
         style="
@@ -62,8 +62,8 @@
           <div class="check-box">
             <p>
               <label>
-                <input type="checkbox" class="filled-in" checked="checked" />
-                <span>Filled in</span>
+                <input type="checkbox" class="filled-in" />
+                <span>Abgabe im Shop/Ohne Abholung</span>
               </label>
             </p>
           </div>
@@ -73,8 +73,8 @@
           <div class="check-box">
             <p>
               <label>
-                <input type="checkbox" class="filled-in" checked="checked" />
-                <span>Filled in</span>
+                <input type="checkbox" class="filled-in" />
+                <span>Abholzeit von 09:00 bis 14:00 Uhr</span>
               </label>
             </p>
           </div>
@@ -84,26 +84,21 @@
           <div class="check-box">
             <p>
               <label>
-                <input type="checkbox" class="filled-in" checked="checked" />
-                <span>Filled in</span>
+                <input type="checkbox" class="filled-in" />
+                <span>Abholzeit von 12:00 bis 17:00 Uhr</span>
               </label>
             </p>
           </div>
           <div>00,00 €</div>
         </div>
         <div>
-          <div
-            class="box dark"
-            style="
-              padding: 10px;
-              float: right;
-              width: 150px;
-              color: white;
-              text-align: center;
-            "
+          <button
+            class="btn waves-effect waves-light dark"
+            style="float: right; background-color: #172446"
+            type="submit"
           >
             Gesamt: 00,00 €
-          </div>
+          </button>
         </div>
       </div>
       <div class="box-resp flex" style="align-items: start">
@@ -164,6 +159,6 @@
           >
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

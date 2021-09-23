@@ -1,6 +1,6 @@
 <div class="padding flex-desktop section-padding" style="max-height: 1200px">
   <div class="half"></div>
-  <div class="halfMin">
+  <div class="halfMin floating">
     <div
       style="
         background-color: white;
@@ -10,69 +10,120 @@
       "
     >
       <div class="title-tiny">Vielversenderanfrage</div>
-      <div class="margin-t">
-        <input
-          type="text"
-          class="browser-default input text margin-b with-border"
-          style="width: 100%"
-          placeholder="Firma"
-        />
+      <form class="margin-t">
+        <div style="width: 100%">
+          <label class="label-input">
+            <input
+              type="text"
+              class="browser-default input text margin-b with-border"
+              style="width: 100%"
+              placeholder="&nbsp"
+            />
+            <span class="label">Firma</span>
+          </label>
+        </div>
         <div class="flex with-border margin-b" style="gap: 10px">
-          <input
-            type="text"
-            class="browser-default input text"
-            style="width: 100%"
-            placeholder="Vorname*"
-          />
-          <input
-            type="text"
-            class="browser-default input text"
-            style="width: 100%"
-            placeholder="Nachname*"
-          />
+          <div style="width: 100%">
+            <label class="label-input">
+              <input
+                type="text"
+                class="browser-default input text margin-b with-border"
+                style="width: 100%"
+                placeholder="&nbsp"
+              />
+              <span class="label">Vorname*</span>
+            </label>
+          </div>
+          <div style="width: 100%">
+            <label class="label-input">
+              <input
+                type="text"
+                class="browser-default input text margin-b with-border"
+                style="width: 100%"
+                placeholder="&nbsp"
+              />
+              <span class="label">Nachname*</span>
+            </label>
+          </div>
         </div>
         <div class="flex-to-column with-border">
-          <input
-            type="text"
-            class="browser-default input text margin-b"
-            style="width: 100%"
-            placeholder="Telefon"
-          />
-          <input
-            type="text"
-            class="browser-default input text margin-b"
-            style="width: 100%"
-            placeholder="E-Mail"
-          />
+          <div style="width: 100%">
+            <label class="label-input">
+              <input
+                type="text"
+                class="browser-default input text margin-b with-border"
+                style="width: 100%"
+                placeholder="&nbsp"
+              />
+              <span class="label">Telefon</span>
+            </label>
+          </div>
+          <div style="width: 100%">
+            <label class="label-input">
+              <input
+                type="text"
+                class="browser-default input text margin-b with-border"
+                style="width: 100%"
+                placeholder="&nbsp"
+              />
+              <span class="label">E-Mail</span>
+            </label>
+          </div>
         </div>
         <div class="flex with-border margin-b" style="gap: 10px">
-          <input
-            type="text"
-            class="browser-default input text"
-            style="width: 100%"
-            placeholder="Shop-System*"
-          />
-          <input
-            type="text"
-            class="browser-default input text"
-            style="width: 100%"
-            placeholder="Warenwirtschaft*"
-          />
+          <div style="width: 100%">
+            <label class="label-input">
+              <input
+                type="text"
+                class="browser-default input text margin-b with-border"
+                style="width: 100%"
+                placeholder="&nbsp"
+              />
+              <span class="label">Shop-System*</span>
+            </label>
+          </div>
+          <div style="width: 100%">
+            <label class="label-input">
+              <input
+                type="text"
+                class="browser-default input text margin-b with-border"
+                style="width: 100%"
+                placeholder="&nbsp"
+              />
+              <span class="label">Warenwirtschaft*</span>
+            </label>
+          </div>
+        </div>
+        <div style="width: 100%" class="hide-desktop">
+          <label class="label-input">
+            <input
+              type="text"
+              class="browser-default input text margin-b with-border"
+              style="width: 100%"
+              placeholder="&nbsp"
+            />
+            <span class="label">Monatliche Sendungen</span>
+          </label>
         </div>
         <div class="flex-to-column flex-mobile with-border">
           <div class="flex margin-b" style="width: 100%">
             <div>Cargo Kunde?</div>
-            <div id="toggle-client" class="flex">
+            <div id="toggle-client" class="flex" style="gap: 5px">
               <div class="toggle active" id="client-yes">Ja</div>
               <div class="toggle" id="client-no">Nein</div>
             </div>
+            <div style="width: 50%" class="hide-mobile">
+              <label class="label-input">
+                <input
+                  type="text"
+                  class="browser-default input text with-border"
+                  style="width: 100%"
+                  placeholder="&nbsp"
+                />
+                <span class="label">Monatliche Sendungen</span>
+              </label>
+            </div>
           </div>
-          <input
-            type="text"
-            class="browser-default input text margin-b"
-            style="width: 100%"
-            placeholder="Monatliche Sendungen"
-          />
         </div>
         <div class="flex margin-b">
           <div>Häufigste Verpackung?</div>
@@ -84,34 +135,36 @@
         </div>
 
         <div style="text-align: center">
-          <a class="waves-effect waves-light btn">Anfrage senden</a>
+          <button class="waves-effect waves-light btn" type="submit">
+            Anfrage senden
+          </button>
         </div>
-      </div>
-    </div>
-    <div
-      style="
-        background-color: white;
-        color: #172446;
-        border-radius: 4px;
-        padding: 30px;
-      "
-      class="margin-t flex-to-column"
-    >
-      <div class="half">
-        <div>Haben Sie einen Online-Shop?</div>
-        <div>
-          <a class="link-icon" href=""
-            >Integrationen <i class="material-icons">chevron_right</i></a
-          >
+      </form>
+      <div
+        style="
+          background-color: white;
+          color: #172446;
+          border-radius: 4px;
+          padding: 30px;
+        "
+        class="margin-t flex-to-column"
+      >
+        <div class="half">
+          <div>Haben Sie einen Online-Shop?</div>
+          <div>
+            <a class="link-icon" href=""
+              >Integrationen <i class="material-icons">chevron_right</i></a
+            >
+          </div>
         </div>
-      </div>
-      <div class="line"></div>
-      <div class="half">
-        <div>Eine Menge zu versenden?</div>
-        <div>
-          <a class="link-icon" href=""
-            >Für Vielversender <i class="material-icons">chevron_right</i></a
-          >
+        <div class="line"></div>
+        <div class="half">
+          <div>Eine Menge zu versenden?</div>
+          <div>
+            <a class="link-icon" href=""
+              >Für Vielversender <i class="material-icons">chevron_right</i></a
+            >
+          </div>
         </div>
       </div>
     </div>

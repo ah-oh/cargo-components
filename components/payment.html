@@ -1,20 +1,20 @@
 <div class="padding">
   <div class="title margin-t">Zahlungsmethode hinzufügen</div>
-  <div class="flex-to-column margin-t">
+  <form class="flex-to-column margin-t">
     <div class="box white margin-b half-box height-box">
       <div class="title-small">Zahlungsmethode</div>
       <div class="radio-box">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Sepa
+            <span class="title-small" style="color: #172446"><span>Sepa</span>
         </p>
       </div>
       <div class="radio-box">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Vorkasse</span>
+            <span class="title-small" style="color: #172446"><span>Vorkasse</span></span>
           </label>
         </p>
       </div>
@@ -22,7 +22,7 @@
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">PayPal</span>
+            <span class="title-small" style="color: #172446"><span>PayPal</span></span>
           </label>
         </p>
       </div>
@@ -30,7 +30,7 @@
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Sofort</span>
+            <span class="title-small" style="color: #172446"><span>Sofort</span></span>
           </label>
         </p>
       </div>
@@ -38,7 +38,7 @@
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Kauf auf Rechnung</span>
+            <span class="title-small" style="color: #172446"><span>Kauf auf Rechnung</span></span>
           </label>
         </p>
       </div>
@@ -50,10 +50,10 @@
           style="width: 100%"
           placeholder="Gutschein-Code"
         />
-        <a
+        <button
           class="waves-effect waves-light btn"
-          style="margin-top: 0; width: 150px"
-          >Anwenden</a
+          style="margin-top: 0; width: 150px" type="submit"
+          >Anwenden</button
         >
       </div>
     </div>
@@ -126,8 +126,8 @@
         <div class="title-small">59,40 €</div>
       </div>
       <div class="margin-b">
-        <a class="waves-effect waves-light btn" style="width: 100%"
-          >Versand kostenpflichtig beauftragen</a
+        <button class="waves-effect waves-light btn" style="width: 100%" type="submit"
+          >Versand kostenpflichtig beauftragen</button
         >
       </div>
       <div style="font-size: 10px" class="hide-mobile">
@@ -137,7 +137,7 @@
         verpackt zu haben. Für Gewerbetreibende gelten ausschließlich die ADSp.
       </div>
     </div>
-  </div>
+  </form>
   <div style="font-size: 10px" class="hide-desktop">
     Die AGB, Datenschutzerklärung und die Widerrufsbelehrung von Cargo
     International GmbH habe ich gelesen, verstanden und erkenne ich an. Des
