@@ -1,64 +1,67 @@
 <div class="padding">
   <div class="title margin-t">Zahlungsmethode hinzufügen</div>
   <div class="flex-to-column margin-t">
-    <div class="box white margin-b half-box" style="height: 600px">
+    <div class="box white margin-b half-box height-box">
       <div class="title-small">Zahlungsmethode</div>
-      <div class="radio">
+      <div class="radio-box">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Abholadresse</span>
-          </label>
+            <span class="title-small" style="color: #172446">Sepa
         </p>
       </div>
-      <div class="radio">
+      <div class="radio-box">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Abholadresse</span>
+            <span class="title-small" style="color: #172446">Vorkasse</span>
           </label>
         </p>
       </div>
-      <div class="radio">
+      <div class="radio-box">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Abholadresse</span>
+            <span class="title-small" style="color: #172446">PayPal</span>
           </label>
         </p>
       </div>
-      <div class="radio">
+      <div class="radio-box">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Abholadresse</span>
+            <span class="title-small" style="color: #172446">Sofort</span>
           </label>
         </p>
       </div>
-      <div class="radio">
+      <div class="radio-box margin-b">
         <p>
           <label>
             <input class="with-gap" name="group1" type="radio" />
-            <span class="title-small" style="color: #172446">Abholadresse</span>
+            <span class="title-small" style="color: #172446">Kauf auf Rechnung</span>
           </label>
         </p>
       </div>
-      <div class="title-small">Gutschein</div>
-      <div class="flex">
+      <div class="title-small margin-b">Gutschein</div>
+      <div class="flex" style="gap: 20px">
         <input
           type="text"
-          class="browser-default input text margin-b with-border"
+          class="browser-default input text with-border"
           style="width: 100%"
-          placeholder="Firma"
+          placeholder="Gutschein-Code"
         />
-        <a class="waves-effect waves-light btn">Anwenden</a>
+        <a
+          class="waves-effect waves-light btn"
+          style="margin-top: 0; width: 150px"
+          >Anwenden</a
+        >
       </div>
     </div>
-    <div class="box white half-box" style="height: 600px">
+    <div class="box white half-box margin-b height-box">
       <div class="title-small margin-b">Bestellübersicht</div>
       <div>
         <div class="box light-grey margin-b" style="padding: 10px">
-          <div class="flex" style="align-items: start">
+          <div class="flex hide-mobile" style="align-items: start">
             <div class="title-small" style="width: 30%">Abholadresse</div>
             <div>
               <div>Max Mustermann</div>
@@ -66,11 +69,25 @@
               <div>12345 Musterort</div>
               <div>Musterland</div>
             </div>
-            <div><i class="material-icons">edit</i></div>
+            <div>
+              <i class="material-icons">edit</i>
+            </div>
+          </div>
+          <div class="flex hide-desktop" style="align-items: start">            
+            <div>
+              <div class="title-small">Abholadresse</div>          
+              <div>Max Mustermann</div>
+              <div>Musterstraße 1</div>
+              <div>12345 Musterort</div>
+              <div>Musterland</div>
+            </div>
+            <div>
+              <i class="material-icons">edit</i>
+            </div>
           </div>
         </div>
         <div class="box light-grey margin-b" style="padding: 10px">
-          <div class="flex" style="align-items: start">
+          <div class="flex hide-mobile" style="align-items: start">
             <div class="title-small" style="width: 30%">
               Liefer- und Rechnungsadresse
             </div>
@@ -81,6 +98,18 @@
               <div>Musterland</div>
             </div>
             <div><i class="material-icons">edit</i></div>
+          </div>
+          <div class="flex hide-desktop" style="align-items: start">            
+            <div>
+              <div class="title-small"> Lieferadresse</div>          
+              <div>Max Mustermann</div>
+              <div>Musterstraße 1</div>
+              <div>12345 Musterort</div>
+              <div>Musterland</div>
+            </div>
+            <div>
+              <i class="material-icons">edit</i>
+            </div>
           </div>
         </div>
       </div>

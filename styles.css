@@ -454,7 +454,7 @@ nav {
 .input {
   height: 40px;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0);
   transition: border 0.5s;
   outline: none;
   background-color: #cccbcb4d;
@@ -471,7 +471,25 @@ nav {
 
 .with-border .input:focus,
 .with-border.input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.dark-input.input {
+  color: white;
+}
+
+.dark-input.input::placeholder {
+  color: white;
+}
+
+.with-border .dark-input.input:hover,
+.with-border.dark-input.input:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.with-border .dark-input.input:focus,
+.with-border.dark-input.input:focus {
+  border-color: white;
 }
 
 .text {
@@ -577,10 +595,6 @@ nav {
   opacity: 0.6;
 }
 
-.box p {
-  margin-bottom: 0;
-}
-
 .detail-box .input {
   width: 400px;
 }
@@ -599,6 +613,61 @@ nav {
 [type="radio"]:checked + span:after,
 [type="radio"].with-gap:checked + span:after {
   background-color: #ff6900;
+}
+
+.radio-box {
+  width: 100%;
+  border: 1px solid #cccbcb4d;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.radio-box.active {
+  background-color: #cccbcb4d;
+}
+
+.radio-box p,
+.check-box p,
+.radio p {
+  margin: 0;
+}
+
+.table .header,
+.table .body .table-row {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 10px;
+}
+
+.table .header,
+.table2 .header {
+  background-color: #3a4562;
+  color: white;
+  border-radius: 4px 4px 0px 0px;
+  padding: 20px;
+}
+
+.table .body .table-row,
+.table2 .body .table-row {
+  border: 1px solid #3a45624d;
+  padding: 10px 20px;
+}
+
+.table .body .table-row:last-of-type,
+.table2 .body .table-row:last-of-type {
+  border-radius: 0 0 4px 4px;
+}
+
+.table-row i {
+  opacity: 0.1;
+}
+
+.table2 .header,
+.table2 .body .table-row {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
 }
 
 /* Only small devices (phones, 600px and under) */
@@ -636,6 +705,12 @@ nav {
 
   .title {
     font-size: 20px;
+  }
+
+  .box-mobile {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #cccbcb4d;
   }
 
   .padding {
@@ -834,6 +909,55 @@ nav {
   .detail [type="radio"].with-gap:checked + span:after {
     background-color: #3a4562;
   }
+
+  .table .header,
+  .table .body .table-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .table2 .header,
+  .table2 .body .table-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .table .header,
+  .table2 .header {
+    background-color: white;
+    color: #3a4562;
+    padding: 10px 20px;
+  }
+
+  .table .body .table-row,
+  .table2 .body .table-row {
+    border: none;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-top: 2px;
+  }
+
+  .box-resp {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    color: #172446;
+    margin-bottom: 10px;
+  }
+
+  .check-box {
+    width: 80%;
+    border: 1px solid #cccbcb4d;
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  .white-input.input,
+  .white-input .input {
+    margin-bottom: 10px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 992px and up) */
@@ -879,4 +1003,121 @@ nav {
   .halfMin {
     width: 45%;
   }
+
+  .height-box {
+    height: 600px;
+  }
+
+  .box-desktop {
+    border-radius: 4px;
+    padding: 40px;
+    width: 75%;
+    background-color: white;
+    color: #172446;
+  }
+
+  .box-resp {
+    background-color: #cccbcb4d;
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .grid-mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .height-desktop {
+    height: 300px;
+  }
+
+  .white-input.input,
+  .white-input .input {
+    background-color: white;
+    margin-bottom: 10px;
+  }
+}
+
+/*Label transistion
+<label for="inp" class="inp">
+            <input type="text" id="inp" placeholder="&nbsp;" />
+            <span class="label">Label</span>
+            <span class="focus-bg"></span>
+          </label> */
+
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.label {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+#inp {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 16px 12px 0 12px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease;
+}
+
+#inp:hover {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#inp:hover:not(:placeholder-shown) + .label {
+  color: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+#inp:focus {
+  background: rgba(0, 0, 0, 0.5);
+  outline: none;
+  box-shadow: inset 0 -2px 0 black;
+}
+#inp:focus + .label {
+  color: black;
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+#inp:focus + .label + .focus-bg {
+  transform: scaleX(1);
+  transition: all 0.1s ease;
 }
