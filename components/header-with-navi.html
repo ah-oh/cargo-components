@@ -80,3 +80,10 @@
   <li><a href="">Retouren</a></li>
   <li><a href="">Abholungen</a></li>
 </ul>
+<script>
+  document.getElementById("close-2").addEventListener("click", function () {
+    elem = document.querySelector(".sidenav-2");
+    instance = M.Sidenav.getInstance(elem);
+    instance.close();
+  });
+</script>

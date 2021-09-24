@@ -2,15 +2,11 @@
   <div class="half"></div>
   <div class="halfMin floating">
     <div
-      style="
-        background-color: white;
-        color: #172446;
-        border-radius: 4px;
-        padding: 30px;
-      "
+      style="background-color: white; color: #172446; border-radius: 4px"
+      class="padding-forms margin-b"
     >
-      <div class="title-tiny">Vielversenderanfrage</div>
-      <form class="margin-t">
+      <div class="title-tiny margin-b">Vielversenderanfrage</div>
+      <form>
         <div style="width: 100%">
           <label class="label-input">
             <input
@@ -22,7 +18,7 @@
             <span class="label">Firma</span>
           </label>
         </div>
-        <div class="flex with-border margin-b" style="gap: 10px">
+        <div class="flex with-border" style="gap: 10px">
           <div style="width: 100%">
             <label class="label-input">
               <input
@@ -70,29 +66,27 @@
             </label>
           </div>
         </div>
-        <div class="flex with-border margin-b" style="gap: 10px">
-          <div style="width: 100%">
-            <label class="label-input">
-              <input
-                type="text"
-                class="browser-default input text margin-b with-border"
-                style="width: 100%"
-                placeholder="&nbsp"
-              />
-              <span class="label">Shop-System*</span>
-            </label>
-          </div>
-          <div style="width: 100%">
-            <label class="label-input">
-              <input
-                type="text"
-                class="browser-default input text margin-b with-border"
-                style="width: 100%"
-                placeholder="&nbsp"
-              />
-              <span class="label">Warenwirtschaft*</span>
-            </label>
-          </div>
+        <div style="width: 100%">
+          <label class="label-input">
+            <input
+              type="text"
+              class="browser-default input text margin-b with-border"
+              style="width: 100%"
+              placeholder="&nbsp"
+            />
+            <span class="label">Shop-System*</span>
+          </label>
+        </div>
+        <div style="width: 100%">
+          <label class="label-input">
+            <input
+              type="text"
+              class="browser-default input text margin-b with-border"
+              style="width: 100%"
+              placeholder="&nbsp"
+            />
+            <span class="label">Warenwirtschaft*</span>
+          </label>
         </div>
         <div style="width: 100%" class="hide-desktop">
           <label class="label-input">
@@ -125,8 +119,8 @@
             </div>
           </div>
         </div>
-        <div class="flex margin-b">
-          <div>Häufigste Verpackung?</div>
+        <div class="flex-to-column-tiny">
+          <div class="margin-b">Häufigste Verpackung?</div>
           <div id="toggle-package" class="flex">
             <div class="toggle active" id="toggle-package">Paket</div>
             <div class="toggle" id="toggle-palette">Palette</div>
@@ -140,33 +134,49 @@
           </button>
         </div>
       </form>
-      <div
-        style="
-          background-color: white;
-          color: #172446;
-          border-radius: 4px;
-          padding: 30px;
-        "
-        class="margin-t flex-to-column"
-      >
-        <div class="half">
-          <div>Haben Sie einen Online-Shop?</div>
-          <div>
-            <a class="link-icon" href=""
-              >Integrationen <i class="material-icons">chevron_right</i></a
-            >
-          </div>
+    </div>
+    <div
+      style="background-color: white; color: #172446; border-radius: 4px"
+      class="flex-to-column padding-forms"
+    >
+      <div class="width-desktop">
+        <div>Haben Sie einen Online-Shop?</div>
+        <div>
+          <a class="link-icon" href=""
+            >Integrationen <i class="material-icons">chevron_right</i></a
+          >
         </div>
-        <div class="line"></div>
-        <div class="half">
-          <div>Eine Menge zu versenden?</div>
-          <div>
-            <a class="link-icon" href=""
-              >Für Vielversender <i class="material-icons">chevron_right</i></a
-            >
-          </div>
+      </div>
+      <div class="line"></div>
+      <div class="padding-desktop width-desktop">
+        <div>Eine Menge zu versenden?</div>
+        <div>
+          <a class="link-icon" href=""
+            >Für Vielversender <i class="material-icons">chevron_right</i></a
+          >
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  const toggleButtons = document.getElementById("toggle-client").children;
+  for (btn of toggleButtons) {
+    btn.addEventListener("click", function () {
+      for (btn2 of toggleButtons) {
+        btn2.classList.remove("active");
+      }
+      this.classList.add("active");
+    });
+  }
+
+  const toggleButtons2 = document.getElementById("toggle-package").children;
+  for (btn of toggleButtons2) {
+    btn.addEventListener("click", function () {
+      for (btn2 of toggleButtons2) {
+        btn2.classList.remove("active");
+      }
+      this.classList.add("active");
+    });
+  }
+</script>

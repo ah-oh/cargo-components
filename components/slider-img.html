@@ -1,9 +1,7 @@
 <div class="light margin-t">
   <div class="padding flex">
     <div style="padding-right: 20px; cursor: pointer" id="previous-img">
-      <i class="material-icons circle" style="padding: 13px 9px 13px 17px"
-        >arrow_back_ios</i
-      >
+      <i class="material-icons circle circle-padding">arrow_back_ios</i>
     </div>
     <div class="carousel carousel-img">
       <a class="carousel-item icon" href="#one!"
@@ -27,3 +25,21 @@
     </div>
   </div>
 </div>
+<script>
+  sliderOptions = { dist: 0, padding: 150 };
+  elemsImg = document.querySelectorAll(".carousel-img");
+  instancesImg = M.Carousel.init(elemsImg, sliderOptions);
+
+  elemSliderImg = document.querySelector(".carousel-img");
+  instanceSliderImg = M.Carousel.getInstance(elemSliderImg);
+
+  document.getElementById("next-img").addEventListener("click", function () {
+    instanceSliderImg.next();
+  });
+
+  document
+    .getElementById("previous-img")
+    .addEventListener("click", function () {
+      instanceSliderImg.prev();
+    });
+</script>

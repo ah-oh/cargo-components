@@ -1,5 +1,5 @@
 <div class="padding margin-t">
-  <div class="title">Angebot wählen</div>
+  <div class="title margin-b">Angebot wählen</div>
   <div class="offer-grid hide-mobile white margin-t">
     <div class="icon">
       <img src="../assets/ci-paket-dark.svg" />
@@ -14,7 +14,13 @@
     </div>
     <div class="offer-cell">
       <div>Früheste Abholung</div>
-      <div style="white-space: nowrap">Montag, 26.April 2021</div>
+      <div style="white-space: nowrap">
+        Montag, 26.April 2021<i
+          class="material-icons"
+          style="font-size: 15px; margin-left: 7px"
+          >calendar_today</i
+        >
+      </div>
     </div>
     <div class="offer-cell">
       <div>Preis</div>
@@ -85,6 +91,7 @@
     <div class="flex margin-b">
       <input
         type="text"
+        style="width: 30%"
         class="browser-default input text margin-b with-border"
         placeholder="Telefon"
       />
@@ -94,6 +101,7 @@
     <div class="flex margin-b">
       <input
         type="date"
+        style="width: 30%"
         class="browser-default input text margin-b with-border"
         placeholder="Telefon"
       />
@@ -130,23 +138,12 @@
     <div class="box white margin-b" style="padding: 20px">
       <div class="title-small">Versandoptionen</div>
       <div class="flex radio-box">
-        <div>
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span style="width: 80%">Terminankündigung beim Empfanger</span>
-            </label>
-          </p>
-        </div>
-        <div style="white-space: nowrap">03.95 €</div>
-      </div>
-      <div class="flex radio-box">
-        <div>
+        <div class="check-box more-row margin-b">
           <p>
             <label>
               <input type="checkbox" class="filled-in" checked="checked" />
               <span style="width: 80%"
-                >Ware kann ohne Empfänger vor Ort abgestellt werden</span
+                ><span>Terminankündigung beim Empfanger</span></span
               >
             </label>
           </p>
@@ -154,11 +151,26 @@
         <div style="white-space: nowrap">03.95 €</div>
       </div>
       <div class="flex radio-box">
-        <div>
+        <div class="check-box more-rows margin-b">
           <p>
             <label>
               <input type="checkbox" class="filled-in" checked="checked" />
-              <span style="width: 80%">Nachnahme</span>
+              <span style="width: 80%"
+                ><span
+                  >Ware kann ohne Empfänger vor Ort abgestellt werden</span
+                ></span
+              >
+            </label>
+          </p>
+        </div>
+        <div style="white-space: nowrap">03.95 €</div>
+      </div>
+      <div class="flex radio-box">
+        <div class="check-box">
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span style="width: 80%"><span>Nachnahme</span></span>
             </label>
           </p>
         </div>

@@ -190,3 +190,46 @@
     </button>
   </div>
 </div>
+
+<script>
+  gap = 16;
+
+  carousel = document.getElementById("carousel");
+  content = document.getElementById("content-slider");
+  next = document.getElementById("next-noWrap");
+  prev = document.getElementById("prev-noWrap");
+  widthItem = document.getElementById("item").getBoundingClientRect().width;
+
+  window.addEventListener(
+    "resize",
+    (e) =>
+      (widthItem = document
+        .getElementById("item")
+        .getBoundingClientRect().width)
+  );
+
+  next.addEventListener("click", (e) => {
+    carousel.scrollBy(widthItem + gap, 0);
+    if (carousel.scrollWidth !== 0) {
+      prev.style.display = "flex";
+    }
+    if (
+      content.scrollWidth - widthItem - gap <=
+      carousel.scrollLeft + carousel.offsetWidth
+    ) {
+      next.style.display = "none";
+    }
+  });
+  prev.addEventListener("click", (e) => {
+    carousel.scrollBy(-(widthItem + gap), 0);
+    if (carousel.scrollLeft - widthItem - gap <= 0) {
+      prev.style.display = "none";
+    }
+    if (
+      !content.scrollWidth - widthItem - gap <=
+      carousel.scrollLeft + widthItem
+    ) {
+      next.style.display = "flex";
+    }
+  });
+</script>

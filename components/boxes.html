@@ -1,28 +1,28 @@
 <div class="padding section section-padding">
-  <div class="title">Warum Cargo International?</div>
-  <div class="flex-desktop">
-    <div class="spacing">
+  <div class="title margin-b">Warum Cargo International?</div>
+  <div class="flex-desktop box-row" style="gap: 16px">
+    <div class="spacing margin-b">
       <img src="../assets/ci-paket.svg" alt="" width="40px" />
       <div style="font-size: 20px">Top Preis</div>
       <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
     </div>
-    <div class="spacing">
+    <div class="spacing margin-b">
       <img src="../assets/ci-paket.svg" alt="" width="40px" />
       <div style="font-size: 20px">Top Preis</div>
       <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
     </div>
-    <div class="spacing">
+    <div class="spacing margin-b">
       <img src="../assets/ci-paket.svg" alt="" width="40px" />
       <div style="font-size: 20px">Top Preis</div>
       <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
     </div>
-    <div class="spacing">
+    <div class="spacing margin-b">
       <img src="../assets/ci-paket.svg" alt="" width="40px" />
       <div style="font-size: 20px">Top Preis</div>
       <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
     </div>
   </div>
-  <div class="flex-desktop box-row">
+  <div class="flex-desktop box-row" style="gap: 16px">
     <div class="box light">
       <img src="../assets/ci-paket.svg" alt="" width="40px" />
       <div style="font-size: 20px">Paketversand</div>
@@ -44,7 +44,64 @@
       <div>ab 25€</div>
     </div>
   </div>
+  <div id="more-container" class="hide">
+    <div class="flex-desktop">
+      <div class="spacing margin-b">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Top Preis</div>
+        <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+      </div>
+      <div class="spacing margin-b">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Top Preis</div>
+        <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+      </div>
+      <div class="spacing margin-b">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Top Preis</div>
+        <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+      </div>
+      <div class="spacing margin-b">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Top Preis</div>
+        <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+      </div>
+    </div>
+    <div class="flex-desktop box-row" style="gap: 16px">
+      <div class="box light">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Paketversand</div>
+        <div>ab 25 €</div>
+      </div>
+      <div class="box light">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Paketversand</div>
+        <div>ab 25€</div>
+      </div>
+      <div class="box light">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Paketversand</div>
+        <div>ab 25€</div>
+      </div>
+      <div class="box light">
+        <img src="../assets/ci-paket.svg" alt="" width="40px" />
+        <div style="font-size: 20px">Paketversand</div>
+        <div>ab 25€</div>
+      </div>
+    </div>
+  </div>
   <div style="text-align: center">
-    <a class="waves-effect waves-light btn">Weitere Leistungen</a>
+    <a class="waves-effect waves-light btn" id="load-more"
+      >Weitere Leistungen</a
+    >
   </div>
 </div>
+<script>
+  const load = document.getElementById("load-more");
+  const moreContainer = document.getElementById("more-container");
+
+  load.addEventListener("click", function () {
+    moreContainer.classList.remove("hide");
+    load.classList.add("hide");
+  });
+</script>

@@ -183,3 +183,32 @@
     </div>
   </div>
 </div>
+<script>
+  const search = document.getElementById("search");
+  const searchInput = document.getElementById("search-input");
+  const icons = document.getElementById("icons");
+  const closeSearch = document.getElementById("close-search");
+  search.addEventListener("click", function () {
+    searchInput.classList.remove("hide");
+    icons.classList.add("hide");
+  });
+
+  closeSearch.addEventListener("click", function () {
+    searchInput.classList.add("hide");
+    icons.classList.remove("hide");
+  });
+
+  const searchMobile = document.getElementById("search-mobile");
+  const searchInputMobile = document.getElementById("search-input-mobile");
+  const iconsMobile = document.getElementById("icons-mobile");
+  const closeSearchMobile = document.getElementById("close-search-mobile");
+  searchMobile.addEventListener("click", function () {
+    searchInputMobile.classList.remove("hide");
+    iconsMobile.classList.add("hide");
+  });
+
+  closeSearchMobile.addEventListener("click", function () {
+    searchInputMobile.classList.add("hide");
+    iconsMobile.classList.remove("hide");
+  });
+</script>

@@ -83,14 +83,18 @@
           e.innerHTML = await fetchHtmlAsText("./components/" + page + ".html");
           contentDiv.appendChild(e);
         }
+
+        //initialisiert alle Materialize-Komponenten (ohne Options)
         M.AutoInit();
 
+        //header -> schließt Sidenav
         document.getElementById("close").addEventListener("click", function () {
           elem = document.querySelector(".sidenav");
           instance = M.Sidenav.getInstance(elem);
           instance.close();
         });
 
+        //header-with-navi -> schließt sidenav
         document
           .getElementById("close-2")
           .addEventListener("click", function () {
@@ -99,6 +103,7 @@
             instance.close();
           });
 
+        //slider-noWrap -> Implementierung für Carousel
         gap = 16;
 
         carousel = document.getElementById("carousel");
@@ -142,6 +147,8 @@
           }
         });
 
+        //slider-text -> options können hier nochmal angepasst werden
+
         sliderOptions = {
           numVisible: 3,
           indicators: true,
@@ -166,6 +173,8 @@
             instanceSliderText.prev();
           });
 
+        //slider-img -> options können hier nochmal angepasst werden
+
         sliderOptions = { dist: 0, padding: 150 };
         elemsImg = document.querySelectorAll(".carousel-img");
         instancesImg = M.Carousel.init(elemsImg, sliderOptions);
@@ -184,6 +193,8 @@
           .addEventListener("click", function () {
             instanceSliderImg.prev();
           });
+
+        //form-box -> toggleButtons (werden mehr Gruppen hinzugefügt, bitte Ids etc. anpassen)
 
         const toggleButtons = document.getElementById("toggle-client").children;
         for (btn of toggleButtons) {
@@ -205,6 +216,8 @@
             this.classList.add("active");
           });
         }
+
+        //header, table, table2 -> Suche mit Textfeld
 
         const search = document.getElementById("search");
         const searchInput = document.getElementById("search-input");
@@ -237,8 +250,44 @@
           searchInputMobile.classList.add("hide");
           iconsMobile.classList.remove("hide");
         });
-      }
 
+        //boxes -> mehr laden
+        const load = document.getElementById("load-more");
+        const moreContainer = document.getElementById("more-container");
+
+        load.addEventListener("click", function () {
+          moreContainer.classList.remove("hide");
+          load.classList.add("hide");
+        });
+
+        //question -> mehr laden
+        const loadQuestion = document.getElementById("load-question");
+        const moreQuestion = document.getElementById("more-question");
+
+        loadQuestion.addEventListener("click", function () {
+          moreQuestion.classList.remove("hide");
+          loadQuestion.classList.add("hide");
+        });
+
+        //shipping -> Versandrechner; hinzufügen von Text-Feldern
+        const add = document.getElementById("add");
+        const shippingContainer = document.getElementById("shipping-container");
+        var deleteShips = document.getElementsByClassName("delete-ship");
+
+        add.addEventListener("click", async function () {
+          const e = document.createElement("div");
+          e.innerHTML = await fetchHtmlAsText("./components/shippingRow.html");
+          shippingContainer.appendChild(e);
+          deleteShips = document.getElementsByClassName("delete-ship");
+
+          for (ship of deleteShips) {
+            ship.addEventListener("click", function () {
+              //console.log(ship.parentNode.parentNode.parentNode);
+              ship.parentNode.parentNode.remove();
+            });
+          }
+        });
+      }
       document.addEventListener("DOMContentLoaded", function (event) {
         loadPages();
       });

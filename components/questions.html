@@ -8,7 +8,8 @@
         <li>
           <div class="collapsible-header flex">
             <div>Was muss ich beim Versand von Reifen beachten?</div>
-            <i class="material-icons">chevron_right</i>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
           </div>
           <div class="collapsible-body">
             <span>Lorem ipsum dolor sit amet.</span>
@@ -19,7 +20,8 @@
         <li>
           <div class="collapsible-header flex">
             <div>Was muss ich beim Versand von Reifen beachten?</div>
-            <i class="material-icons">chevron_right</i>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
           </div>
           <div class="collapsible-body">
             <span>Lorem ipsum dolor sit amet.</span>
@@ -30,7 +32,8 @@
         <li>
           <div class="collapsible-header flex">
             <div>Was muss ich beim Versand von Reifen beachten?</div>
-            <i class="material-icons">chevron_right</i>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
           </div>
           <div class="collapsible-body">
             <span>Lorem ipsum dolor sit amet.</span>
@@ -41,7 +44,58 @@
         <li>
           <div class="collapsible-header flex">
             <div>Was muss ich beim Versand von Reifen beachten?</div>
-            <i class="material-icons">chevron_right</i>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
+          </div>
+          <div class="collapsible-body">
+            <span>Lorem ipsum dolor sit amet.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="more-question" class="hide">
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header flex">
+            <div>Was muss ich beim Versand von Reifen beachten?</div>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
+          </div>
+          <div class="collapsible-body">
+            <span>Lorem ipsum dolor sit amet.</span>
+          </div>
+        </li>
+      </ul>
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header flex">
+            <div>Was muss ich beim Versand von Reifen beachten?</div>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
+          </div>
+          <div class="collapsible-body">
+            <span>Lorem ipsum dolor sit amet.</span>
+          </div>
+        </li>
+      </ul>
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header flex">
+            <div>Was muss ich beim Versand von Reifen beachten?</div>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
+          </div>
+          <div class="collapsible-body">
+            <span>Lorem ipsum dolor sit amet.</span>
+          </div>
+        </li>
+      </ul>
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header flex">
+            <div>Was muss ich beim Versand von Reifen beachten?</div>
+            <i class="material-icons chev-right">chevron_right</i>
+            <i class="material-icons chev-down">expand_more</i>
           </div>
           <div class="collapsible-body">
             <span>Lorem ipsum dolor sit amet.</span>
@@ -50,7 +104,18 @@
       </ul>
     </div>
     <div style="text-align: center">
-      <a class="waves-effect waves-light btn">Alle Fragen & Antworten</a>
+      <a class="waves-effect waves-light btn" id="load-question"
+        >Alle Fragen & Antworten</a
+      >
     </div>
   </div>
 </div>
+<script>
+  const loadQuestion = document.getElementById("load-question");
+  const moreQuestion = document.getElementById("more-question");
+
+  loadQuestion.addEventListener("click", function () {
+    moreQuestion.classList.remove("hide");
+    loadQuestion.classList.add("hide");
+  });
+</script>

@@ -1,39 +1,35 @@
-<div class="padding flex-desktop section-padding" style="max-height: 1200px">
+<div class="padding flex-desktop section-padding" style="max-height: 2000px">
   <div class="half"></div>
   <div class="half floating">
     <div
-      style="
-        background-color: white;
-        color: #172446;
-        border-radius: 4px;
-        padding: 30px;
-      "
+      style="background-color: white; color: #172446; border-radius: 4px"
+      class="padding-forms margin-b"
     >
       <div class="title-tiny">Jetzt Versandkosten berechnen</div>
       <div class="row tabs-img margin-t">
         <div>
           <ul class="tabs no-indicator shipping-grid">
             <li class="tab">
-              <a class="active" href="#test1"
+              <a class="active hide-tiny" href="#test1"
                 ><img src="../assets/ci-paket-dark.svg" width="30px" />
                 <div class="tab-font">Paket</div></a
               >
             </li>
             <li class="tab">
-              <a href="#test2"
+              <a href="#test2" class="hide-tiny"
                 ><img src="../assets/ci-sperrgut.svg" width="30px" />
                 <div class="tab-font">Sperrgut</div></a
               >
             </li>
 
             <li class="tab">
-              <a href="#test3"
+              <a href="#test3" class="hide-tiny"
                 ><img src="../assets/ci-einwegpalette.svg" width="30px" />
                 <div class="tab-font">Einwegpalette</div></a
               >
             </li>
             <li class="tab">
-              <a href="#test4"
+              <a href="#test4" class="hide-tiny"
                 ><img src="../assets/ci-europalette.svg" width="30px" />
                 <div class="tab-font">Europalette</div></a
               >
@@ -76,70 +72,6 @@
                   />
                   <span class="label">Zustelladresse</span>
                 </label>
-              </div>
-            </div>
-            <div class="flex-to-column">
-              <div class="input-row margin-b">
-                <div>
-                  <label class="label-input">
-                    <input
-                      type="text"
-                      class="browser-default input text"
-                      style="width: 100%"
-                      placeholder="&nbsp"
-                    />
-                    <span class="label">Länge</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="label-input">
-                    <input
-                      type="text"
-                      class="browser-default input text"
-                      style="width: 100%"
-                      placeholder="&nbsp"
-                    />
-                    <span class="label">Breite</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="label-input">
-                    <input
-                      type="text"
-                      class="browser-default input text"
-                      style="width: 100%"
-                      placeholder="&nbsp"
-                    />
-                    <span class="label">Höhe</span>
-                  </label>
-                </div>
-              </div>
-              <div class="flex margin-b">
-                <div style="width: 40%">
-                  <label class="label-input">
-                    <input
-                      type="text"
-                      class="browser-default input text with-border"
-                      style="width: 100%"
-                      placeholder="&nbsp"
-                    />
-                    <span class="label">Gewicht</span>
-                  </label>
-                </div>
-                <div style="width: 40%">
-                  <label class="label-input">
-                    <input
-                      type="text"
-                      class="browser-default input text with-border"
-                      style="width: 100%"
-                      placeholder="&nbsp"
-                    />
-                    <span class="label">Wert in €</span>
-                  </label>
-                </div>
-                <i style="cursor: pointer" class="material-icons icon-btn"
-                  >delete</i
-                >
               </div>
             </div>
             <div class="flex-to-column margin-b">
@@ -201,11 +133,15 @@
                     <span class="label">Wert in €</span>
                   </label>
                 </div>
-                <i style="cursor: pointer" class="material-icons icon-btn"
+                <i
+                  style="cursor: pointer"
+                  class="material-icons icon-btn"
+                  id="add"
                   >add</i
                 >
               </div>
             </div>
+            <div id="shipping-container"></div>
             <div style="text-align: center">
               <button class="waves-effect waves-light btn" type="submit">
                 Versandkosten berechnen
@@ -216,15 +152,10 @@
       </div>
     </div>
     <div
-      style="
-        background-color: white;
-        color: #172446;
-        border-radius: 4px;
-        padding: 30px;
-      "
-      class="margin-t flex-to-column"
+      style="background-color: white; color: #172446; border-radius: 4px"
+      class="flex-to-column padding-forms"
     >
-      <div class="half">
+      <div class="width-desktop">
         <div>Haben Sie einen Online-Shop?</div>
         <div>
           <a class="link-icon" href=""
@@ -233,7 +164,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <div class="half">
+      <div class="width-desktop padding-desktop">
         <div>Eine Menge zu versenden?</div>
         <div>
           <a class="link-icon" href=""

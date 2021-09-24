@@ -18,7 +18,7 @@ html {
 }
 
 .margin-b {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 /*Abstand oben unten der Komponente*/
@@ -51,7 +51,7 @@ html {
 }
 
 .title-small {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -91,15 +91,15 @@ b {
 /* Box für Logos/Bilder/Text -> mit jeweiliger background-color */
 .box {
   border-radius: 4px;
-  padding: 40px;
+  padding: 32px;
 }
 
 /*kleine Boxen für Logos -> Hintergrundfarbe extra einstellen */
 .logo-box {
   width: 32%;
-  height: 80px;
+  height: 56px;
   border-radius: 4px;
-  padding: 20px;
+  padding: 7px 20px;
 }
 
 .logo-box-big {
@@ -115,7 +115,7 @@ b {
 
 /*Reihe von 4 Boxen */
 .box-row > div {
-  min-width: 23%;
+  width: 100%;
   height: 100%;
   margin-bottom: 10px;
 }
@@ -146,7 +146,7 @@ b {
 
 .facts > div:nth-child(even) {
   font-size: 26px;
-  padding: 5px 0 5px 0;
+  margin: 16px 0 32px 0;
 }
 
 /*für Auflistungen mit Punkt*/
@@ -176,7 +176,7 @@ b {
 .btn {
   background-color: #ff6900;
   color: white;
-  margin-top: 20px;
+  margin-top: 16px;
   text-transform: none;
 }
 
@@ -217,6 +217,7 @@ nav .sidenav-trigger {
 /*Carousels: */
 .carousel {
   cursor: pointer;
+  height: 500px;
 }
 
 /*Für Slider mit Bildern -> carousel-img */
@@ -225,7 +226,7 @@ nav .sidenav-trigger {
 }
 
 .carousel.carousel-img .carousel-item {
-  height: 50px !important;
+  height: 40px !important;
 }
 
 .carousel.carousel-img .carousel-item > img {
@@ -235,7 +236,7 @@ nav .sidenav-trigger {
 
 /* für Slider mit Text -> carousel-text */
 .carousel.carousel-text .carousel-item {
-  height: 300px;
+  height: 400px;
   border-radius: 4px;
   width: 600px !important;
   padding: 20px 50px;
@@ -322,6 +323,7 @@ nav .sidenav-trigger {
   position: relative;
   top: -25px;
   color: #172446;
+  text-transform: none;
 }
 
 .no-indicator > .indicator {
@@ -433,6 +435,18 @@ nav .sidenav-trigger {
   border-radius: 0 0 3px 3px;
 }
 
+.collapsible .chev-down {
+  display: none;
+}
+
+.collapsible .active .chev-down {
+  display: inline-block;
+}
+
+.collapsible .active .chev-right {
+  display: none;
+}
+
 /* Collapsible Menu */
 .menu .collapsible {
   box-shadow: none;
@@ -464,7 +478,7 @@ nav .sidenav-trigger {
 
 /*für Input-felder */
 .input {
-  height: 40px;
+  height: 48px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0);
   transition: border 0.5s, transform 0.15s ease;
@@ -601,7 +615,7 @@ nav .sidenav-trigger {
 .toggle {
   color: #1724464d;
   border-radius: 4px;
-  padding: 10px;
+  padding: 11px;
   border: 1px solid #1724464d;
   text-align: center;
   margin-left: 3px;
@@ -661,18 +675,21 @@ nav .sidenav-trigger {
 
 /* Radio Buttons */
 [type="radio"]:not(:checked) + span:before {
-  border-color: #ff6900;
+  border-color: #cccbcb4d;
+  left: 5px;
 }
 
 [type="radio"].with-gap:checked + span:before,
 [type="radio"]:checked + span:after,
 [type="radio"].with-gap:checked + span:after {
   border-color: #ff6900;
+  left: 5px;
 }
 
 [type="radio"]:checked + span:after,
 [type="radio"].with-gap:checked + span:after {
   background-color: #ff6900;
+  left: 5px;
 }
 
 .radio-box .title-small {
@@ -702,7 +719,8 @@ nav .sidenav-trigger {
   background-color: #cccbcb4d;
 }
 
-.radio-box.active {
+.radio-box [type="radio"] + span {
+  padding-left: 45px;
 }
 
 .radio-box p,
@@ -730,7 +748,7 @@ nav .sidenav-trigger {
 .table .body .table-row {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  gap: 10px;
+  gap: 16px;
 }
 
 .table .header,
@@ -782,6 +800,25 @@ nav .sidenav-trigger {
   #prev-noWrap,
   #next-noWrap {
     display: none;
+  }
+
+  .hide-tiny > img {
+    display: none;
+  }
+
+  .hide-tiny > .tab-font {
+    margin: auto;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .flex-to-column-tiny {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
   }
 }
 
@@ -839,6 +876,7 @@ nav .sidenav-trigger {
 
   .logo-box-big {
     width: 100%;
+    padding: 34px;
   }
 
   .logo-box > img {
@@ -894,7 +932,7 @@ nav .sidenav-trigger {
     background-color: #cccbcb4d;
   }
 
-  .input-row > .input {
+  .shipping .input-row .input {
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(255, 255, 255, 0);
   }
@@ -955,7 +993,7 @@ nav .sidenav-trigger {
   }
 
   .offer-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 2fr 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 5px;
   }
@@ -1006,7 +1044,7 @@ nav .sidenav-trigger {
   .table .header,
   .table .body .table-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
 
@@ -1047,10 +1085,49 @@ nav .sidenav-trigger {
     padding: 5px;
   }
 
-  .white-input.input,
-  .white-input .input {
+  .circle {
+    padding: 5px;
+  }
+
+  .circle-padding {
+    padding: 5px 1px 5px 9px;
+  }
+
+  /*.check-box [type="checkbox"]:checked + span {
+    background-color: #cccbcb4d;
+  }*/
+
+  .box {
+    padding: 20px;
+  }
+
+  .padding-forms {
+    padding: 20px;
+  }
+
+  .margin-b {
     margin-bottom: 10px;
   }
+
+  /* .more-row [type="checkbox"].filled-in:checked + span:not(.lever):after,
+  .more-row [type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
+    top: 13px;
+  }
+
+  .more-row [type="checkbox"] + span:not(.lever):before {
+    margin-top: 15px;
+  }
+
+  .more-rows [type="checkbox"].filled-in:checked + span:not(.lever):after,
+  .more-rows
+    [type="checkbox"].filled-in:not(:checked)
+    + span:not(.lever):after {
+    top: 26px;
+  }
+
+  .more-rows [type="checkbox"] + span:not(.lever):before {
+    margin-top: 28px;
+  }*/
 }
 
 /* Extra large devices (large laptops and desktops, 992px and up) */
@@ -1063,7 +1140,6 @@ nav .sidenav-trigger {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-height: 600px;
   }
 
   .spacing {
@@ -1071,7 +1147,7 @@ nav .sidenav-trigger {
   }
 
   .half {
-    max-width: 45%;
+    max-width: 48%;
   }
 
   .half-box {
@@ -1124,12 +1200,32 @@ nav .sidenav-trigger {
   }
 
   .height-desktop {
-    height: 300px;
+    height: 350px;
   }
 
   .white-input.input,
   .white-input .input {
     background-color: white;
-    margin-bottom: 10px;
+  }
+
+  .padding-desktop {
+    padding-left: 20px;
+  }
+
+  .width-desktop {
+    width: 50%;
+  }
+
+  .padding-forms {
+    padding: 32px 64px;
+  }
+
+  .stepper-tab {
+    justify-content: start;
+    padding-left: 16px;
+  }
+
+  .circle-padding {
+    padding: 13px 9px 13px 17px;
   }
 }

@@ -98,3 +98,26 @@
     </div>
   </div>
 </div>
+<script>
+  sliderOptions = {
+    numVisible: 3,
+    indicators: true,
+    padding: 200,
+  };
+
+  elemsText = document.querySelectorAll(".carousel-text");
+  instancesText = M.Carousel.init(elemsText, sliderOptions);
+
+  elemSliderText = document.querySelector(".carousel-text");
+  instanceSliderText = M.Carousel.getInstance(elemSliderText);
+
+  document.getElementById("next-text").addEventListener("click", function () {
+    instanceSliderText.next();
+  });
+
+  document
+    .getElementById("previous-text")
+    .addEventListener("click", function () {
+      instanceSliderText.prev();
+    });
+</script>
