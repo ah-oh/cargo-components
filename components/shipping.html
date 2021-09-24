@@ -74,7 +74,7 @@
                 </label>
               </div>
             </div>
-            <div class="flex-to-column margin-b">
+            <div class="flex-to-column">
               <div class="input-row margin-b">
                 <div>
                   <label class="label-input">
@@ -175,3 +175,24 @@
     </div>
   </div>
 </div>
+<script>
+  function remove() {
+    this.parentNode.parentNode.remove();
+  }
+
+  const add = document.getElementById("add");
+  const shippingContainer = document.getElementById("shipping-container");
+  var deleteShips = document.getElementsByClassName("delete-ship");
+
+  add.addEventListener("click", async function () {
+    console.log("hallo");
+    const e = document.createElement("div");
+    e.innerHTML = await fetchHtmlAsText("./components/shippingRow.html");
+    shippingContainer.appendChild(e);
+    deleteShips = document.getElementsByClassName("delete-ship");
+
+    for (ship of deleteShips) {
+      ship.addEventListener("click", remove);
+    }
+  });
+</script>

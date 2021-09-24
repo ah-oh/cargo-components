@@ -84,6 +84,12 @@
           contentDiv.appendChild(e);
         }
 
+        //Funktion für Shipping
+        function remove() {
+          //console.log(ship.parentNode.parentNode.parentNode);
+          this.parentNode.parentNode.remove();
+        }
+
         //initialisiert alle Materialize-Komponenten (ohne Options)
         M.AutoInit();
 
@@ -275,16 +281,14 @@
         var deleteShips = document.getElementsByClassName("delete-ship");
 
         add.addEventListener("click", async function () {
+          console.log("hallo");
           const e = document.createElement("div");
           e.innerHTML = await fetchHtmlAsText("./components/shippingRow.html");
           shippingContainer.appendChild(e);
           deleteShips = document.getElementsByClassName("delete-ship");
 
           for (ship of deleteShips) {
-            ship.addEventListener("click", function () {
-              //console.log(ship.parentNode.parentNode.parentNode);
-              ship.parentNode.parentNode.remove();
-            });
+            ship.addEventListener("click", remove);
           }
         });
       }
