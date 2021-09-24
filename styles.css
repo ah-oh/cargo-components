@@ -21,6 +21,10 @@ html {
   margin-bottom: 16px;
 }
 
+.gap {
+  gap: 16px;
+}
+
 /*Abstand oben unten der Komponente*/
 .section-padding {
   padding-top: 60px;
@@ -1107,6 +1111,10 @@ nav .sidenav-trigger {
 
   .margin-b {
     margin-bottom: 10px;
+  }
+
+  .gap {
+    gap: 10px;
   }
 
   /* .more-row [type="checkbox"].filled-in:checked + span:not(.lever):after,
